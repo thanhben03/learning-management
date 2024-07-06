@@ -4,9 +4,7 @@ $body = [
 ];
 require_once(__DIR__ . '/header.php');
 $sql = "SELECT * FROM lichhoc WHERE user_id = $user_id";
-echo $sql;
 $danhsach_lh = $BB->getList($sql);
-
 ?>
 <div class="modal fade" id="modal-lichhoc">
     <div class="modal-dialog">
@@ -143,17 +141,17 @@ $danhsach_lh = $BB->getList($sql);
                                         foreach ($danhsach_lh as $lh) {
                                             echo '
                                                 <tr>
-                                                    <td>' . $lh['id'] . '</td>
+                                                    <td>' . $lh['id_lh'] . '</td>
                                                     <td>' . $lh['tenmon'] . '</td>
                                                     <td>' . $lh['phonghoc'] . '</td>
                                                     <td>' . $lh['tiet_bd'] . '</td>
                                                     <td>' . $lh['sotiet'] . '</td>
                                                     <td>' . $lh['thu'] . '</td>
                                                     <td>
-                                                    <button data-toggle="modal" data-target="#modal-lichhoc"  onclick="viewLH(' . $lh['id'] . ')" aria-label="" style="color:white;" class="btn btn-info btn-sm btn-icon-left m-b-10" type="button">
+                                                    <button data-toggle="modal" data-target="#modal-lichhoc"  onclick="viewLH(' . $lh['id_lh'] . ')" aria-label="" style="color:white;" class="btn btn-info btn-sm btn-icon-left m-b-10" type="button">
                                                         <i class="fas fa-edit mr-1"></i><span class="">Edit</span>
                                                     </button>
-                                                    <button onclick="deleteLH(' . $lh['id'] . ')" style="color:white;" class="btn btn-danger btn-sm btn-icon-left m-b-10" type="button">
+                                                    <button onclick="deleteLH(' . $lh['id_lh'] . ')" style="color:white;" class="btn btn-danger btn-sm btn-icon-left m-b-10" type="button">
                                                         <i class="fas fa-trash mr-1"></i><span class="">Delete</span>
                                                     </button>
 
