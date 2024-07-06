@@ -1,0 +1,7 @@
+RewriteEngine On
+#Xử lý Route CLIENT
+RewriteRule ^home/view-mon/([A-Za-z0-9-]+) index.php?action=view-mon&id=$1 [L]
+RewriteRule ^home/gallery/([A-Za-z0-9-]+) index.php?action=gallery&id=$1 [L]
+RewriteRule ^home/upload/([A-Za-z0-9-]+) index.php?action=upload&id=$1 [L]
+RewriteRule ^home/([A-Za-z0-9-]+) index.php?action=$1 [L]
+RewriteRule ^home index.php?action=index [L]
